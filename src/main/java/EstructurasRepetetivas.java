@@ -35,7 +35,7 @@ public class EstructurasRepetetivas {
                     System.out.println("Introduzca un numero:");
                     numintro = sc.nextInt();
                     amount = amount + numintro;
-                    cont = cont +1;
+                    cont = cont + 1;
                     if (numintro != 0) {
                         System.out.println("Intentalo de nuevo");
                     } else System.out.println("Has acertado");
@@ -45,11 +45,28 @@ public class EstructurasRepetetivas {
                 break;
             case 4:
                 System.out.println("Introduca el numero de numeros que quiere introducir:");
-                int numnum= sc.nextInt();
-                int numn = 0;
-                int equal;
-                int greater;
-                int minus;
+                int numnum = sc.nextInt();
+                int numn;
+                int equal = 0;
+                int negative = 0;
+                int positive = 0;
+                for (int i = 1; i <= numnum; i++) {
+                    System.out.println("Introduzca numero:");
+                    numn = sc.nextInt();
+                    if (numn > 0) {
+                        positive++;
+                    } else if (numn < 0) {
+                        negative++;
+                    } else equal++;
+                }
+                System.out.println("Numeros mayores que 0: " +positive);
+                System.out.println("Numeros menores que 0: " +negative);
+                System.out.println("Numeros iguales que 0: " +equal);
+                break;
+            case 5:
+                System.out.println("Introduce caracteres:");
+
         }
     }
 }
+
